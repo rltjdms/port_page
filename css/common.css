@@ -439,10 +439,7 @@ main section {
 }
 
 /* sec4 */
-.sec4 .container_box {
-  max-width: 500px;
-  margin: 200px auto 300px;
-}
+
 
 #contact a {
   text-decoration: none;

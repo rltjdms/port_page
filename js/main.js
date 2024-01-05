@@ -78,7 +78,7 @@ let chartOST = chartBox.offsetTop; // 첫 번째 chart의 offsetTop을 기준으
 
 let isActive = false;
 
-window.onload = function() {
+document.addEventListener("DOMContentLoaded", function() {
   typing();
 
   // setInterval 사용
@@ -104,56 +104,56 @@ window.onload = function() {
   });
 
   
-window.addEventListener("scroll", () => {
-  sct = window.scrollY;
+  window.addEventListener("scroll", () => {
+    sct = window.scrollY;
 
-  section.forEach((sec, idx) => {
-    let rect = sec.getBoundingClientRect();
-    if (rect.top <= window.innerHeight / 2 && rect.bottom >= window.innerHeight / 2) {
-      for (let m of navMenu) {
-        m.classList.remove("active");
+    section.forEach((sec, idx) => {
+      let rect = sec.getBoundingClientRect();
+      if (rect.top <= window.innerHeight / 2 && rect.bottom >= window.innerHeight / 2) {
+        for (let m of navMenu) {
+          m.classList.remove("active");
+        }
+        navMenu[idx].classList.add("active");
+        highlight.style.display = "block";
+
+        let targetLeft = navMenu[idx].offsetLeft;
+        let targetWidth = navMenu[idx].offsetWidth;
+        highlight.style.left = targetLeft + "px";
+        highlight.style.width = targetWidth + "px";
       }
-      navMenu[idx].classList.add("active");
-      highlight.style.display = "block";
-
-      let targetLeft = navMenu[idx].offsetLeft;
-      let targetWidth = navMenu[idx].offsetWidth;
-      highlight.style.left = targetLeft + "px";
-      highlight.style.width = targetWidth + "px";
-    }
-  });
-
-  siteRow.forEach(row => {
-    let rect = row.getBoundingClientRect();
-    if (rect.top <= window.innerHeight / 2 && rect.bottom >= window.innerHeight / 2) {
-      row.classList.add("active");
-    }
-  });
-
-  if (uiuxRow.offsetTop - 250 <= sct) {
-    uiuxRow.classList.add("active");
-  }
-
-  if (sct === 0) {
-    highlight.style.display = "none";
-    navMenu.forEach(m => {
-      m.classList.remove("active");
     });
-    header.classList.remove("active");
-  } else {
-    header.classList.add("active");
-  }
 
-  if (sct >= chartOST - 500) {
-    if (!isActive) {
-      chartAnimation();
-      isActive = true;
+    siteRow.forEach(row => {
+      let rect = row.getBoundingClientRect();
+      if (rect.top <= window.innerHeight / 2 && rect.bottom >= window.innerHeight / 2) {
+        row.classList.add("active");
+      }
+    });
+
+    if (uiuxRow.offsetTop - 250 <= sct) {
+      uiuxRow.classList.add("active");
     }
-  } 
+
+    if (sct === 0) {
+      highlight.style.display = "none";
+      navMenu.forEach(m => {
+        m.classList.remove("active");
+      });
+      header.classList.remove("active");
+    } else {
+      header.classList.add("active");
+    }
+
+    if (sct >= chartOST - 500) {
+      if (!isActive) {
+        chartAnimation();
+        isActive = true;
+      }
+    } 
+
+  });
 
 });
-
-};
 
 
 function chartAnimation() {
