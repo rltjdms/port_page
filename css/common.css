@@ -155,6 +155,7 @@ body {
   font-family: "Pretendard", 'Noto Sans Kr', sans-serif;
   letter-spacing: -0.025em;
   color: var(--black);
+  overflow-x:hidden;
 }
 
 /*
@@ -470,8 +471,16 @@ main section {
   }
 
   .sec1 .charts {
-    width: 400px;
-    flex-wrap: wrap;
+    width:100%;
+    max-width:400px;
+    display:flex;
+    flex-wrap:wrap;
+    justify-content:center;
+    gap:40px 20px;
+  }
+
+  .sec1 .charts .chart{
+    width:40%;
   }
 
   .sec2 .row:nth-child(odd) {
