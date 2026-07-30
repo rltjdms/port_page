@@ -1,0 +1,42 @@
+[
+    {
+        "name": "HTML",
+        "img": "./img/html5.svg"
+    },
+    {
+        "name": "CSS",
+        "img": "./img/css.svg"
+    },
+    {
+        "name": "Sass",
+        "img": "./img/sass.png"
+    },
+    {
+        "name": "JavaScript",
+        "img": "./img/javascript.svg"
+    },
+    {
+        "name": "jQuery",
+        "img": "./img/jquery.svg"
+    },
+    {
+        "name": "PHP",
+        "img": "./img/php.svg"
+    },
+    {
+        "name": "MySQL",
+        "img": "./img/mysql.png"
+    },
+    {
+        "name": "React",
+        "img": "./img/react.svg"
+    },
+    {
+        "name": "Bootstrap",
+        "img": "./img/bootstrap.png"
+    },
+    {
+        "name": "Figma",
+        "img": "./img/figma.svg"
+    }
+]

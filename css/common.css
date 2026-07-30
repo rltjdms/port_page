@@ -157,79 +157,6 @@ body {
   color: var(--black);
 }
 
-/*
-.loader{
-  position: fixed;
-  top: 0; left: 0;
-  width: 100%;
-  height: 100%;
-  background-color: var(--blue);
-  z-index: 9999;
-  opacity: 1;
-  transition: 0.5s ease;
-  text-align: center;
-}
-
-.loader .loading_box {
-  position: absolute;
-  top: 50%;
-  left: 50%;
-  transform: translate(-50%, -50%);
-}
-.loader6{
-  position: absolute;
-  top: calc(100% + 26%);
-  left: 50%;
-  width: 12px;
-  height: 12px;
-  border-radius: 12px;
-  background-color: var(--white);
-  -webkit-transform-origin:  50% 50%;
-  transform-origin:  50% 50% ;
-  -webkit-animation: loader6 1s ease-in-out infinite;
-  animation: loader6 1s ease-in-out infinite;
-}
-
-.loader6:before{
-  content: "";
-  position: absolute;
-  background-color: var(--white);
-  top: 0px;
-  left: -25px;
-  height: 12px;
-  width: 12px;
-  border-radius: 12px;
-}
-
-.loader6:after{
-  content: "";
-  position: absolute;
-  background-color:  var(--white);
-  top: 0px;
-  left: 25px;
-  height: 12px;
-  width: 12px;
-  border-radius: 12px;
-}
-
-
-@-webkit-keyframes loader6{
-  0%{-webkit-transform:rotate(0deg);}
-  50%{-webkit-transform:rotate(180deg);}
-  100%{-webkit-transform:rotate(180deg);}
-}
-
-@keyframes loader6{
-  0%{transform:rotate(0deg);}
-  50%{transform:rotate(180deg);}
-  100%{transform:rotate(180deg);}
-}
-
-
-#wrap,#container {
-	width: 100%;
-}
-*/
 
 /* Header */
 header.active {
@@ -336,58 +263,64 @@ main section {
   line-height: 1.5;
 }
 
-.sec1 .charts .chart h2{
-  position: absolute;
-  left: 50%;
-  top: 41%;
-  transform:translateX(-50%);
-  margin: 0;
-  font-weight: 600;
+.sec1 .skill_slide {
+    width: 100%;
+    overflow: hidden;
 }
 
-.sec1 .charts .chart h3{   
-  position: absolute;
-  left: 50%;
-  top: 19%;
-  transform:translateX(-50%);
-  margin: 0;    
-  color:#444;
-  font-size: var(--h6-size);
-  font-weight: bold;
+.sec1 .skill_track {
+
+    gap: 80px;
+    width: max-content;
+
+    animation: skillMove 15s linear infinite;
 }
 
-.sec1 .charts .chart svg{
-  width: 100px;
-  height: 100px;
+.sec1 .skill_item {
+    display: flex;
+    align-items: center;
+    flex-direction: column;
+    flex: 0 0 auto;
+    width: 80px;
 }
 
-.sec1 svg circle{
-  fill: #fff;
-  stroke-width: 5px;
-  stroke:#129412;
-  stroke-dasharray: 410px;
-  stroke-dashoffset: 410px;
-  stroke-linecap: round;      
-  /* transition:0.1s; */
-  transform: rotate(270deg);
-  transform-origin: 50% 50%;
+.sec1 .skill_img {
+    width: 80px;
+    height: 80px;
 }
 
-.sec1 .chart:nth-child(2) circle{
-  stroke:#ff5248;
+.sec1 .skill_img img {
+    width: 100%;
+    height: 100%;
+    object-fit: contain;
 }
 
-.sec1 .chart:nth-child(3) circle{
-  stroke:#19cdca;    
+.sec1 .skill_name {
+    margin: 0;
+
+    font-size: 14px;
+    font-weight: 500;
+    white-space: nowrap;
 }
 
-.sec1 .chart:nth-child(4) circle{
-  stroke:#4e80e1;
+
+@keyframes skillMove {
+
+    from {
+        transform: translateX(0);
+    }
+
+    to {
+        transform: translateX(-50%);
+    }
+
 }
 
-.sec1 .chart:nth-child(5) circle{
-  stroke:#ffc114;
+
+.skill_track:hover {
+    animation-play-state: paused;
 }
+
 
 /* sec2 */
 .sec2 {
@@ -418,6 +351,8 @@ main section {
   opacity: 1;
   transform: translateX(0);
 }
+
+
 
 /* sec3 */
 .sec3 div {
