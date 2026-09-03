@@ -1,308 +1,203 @@
-// 타이핑 효과
-let typeText = document.querySelector(".typeText");
-let typeTextArr = ["함께 일하고 싶은", "같이 밥먹고 싶은", "웹을 통해 이야기하는"];
-let index = 0, isAdding = true, typeTextIndex = 0;
-let typingInterval;
+/* =========================================================
+   DOM ELEMENTS
+========================================================= */
 
-function typing() {
+const header = document.querySelector('.header');
+const revealItems = document.querySelectorAll('.reveal');
 
-    typeText.innerText =
-        typeTextArr[typeTextIndex].slice(0, index);
 
-    if (isAdding) {
+/* =========================================================
+   SCROLL REVEAL
+========================================================= */
 
-        if (index >= typeTextArr[typeTextIndex].length) {
-
-            isAdding = false;
-
-            setTimeout(
-                resetAndContinue,
-                5200,
-                hideCursor
-            );
-
+const observer = new IntersectionObserver((entries) => {
+    entries.forEach((entry) => {
+        if (entry.isIntersecting) {
+            entry.target.classList.add('show');
         } else {
-
-            index++;
-
+            /*
+                다시 위로 올라갔을 때
+                애니메이션이 다시 시작되도록
+            */
+            entry.target.classList.remove('show');
         }
-
-    } else {
-
-        if (index === 0) {
-
-            isAdding = true;
-
-            typeTextIndex =
-                (typeTextIndex + 1) % typeTextArr.length;
-
-            if (typeTextIndex === 0) {
-
-                clearInterval(typingInterval);
-
-                hideCursor();
-
-            }
-
-        } else {
-
-            index--;
-
-        }
-
-    }
-}
-
-
-function resetAndContinue() {
-
-    index = 0;
-    isAdding = true;
-
-    typeTextIndex =
-        (typeTextIndex + 1) % typeTextArr.length;
-
-    if (typeTextIndex === 0) {
-
-        clearInterval(typingInterval);
-
-        hideCursor();
-
-    }
-
-}
-
-
-// Cursor 숨기기
-function hideCursor() {
-
-    let cursor =
-        document.querySelector(".typeAct");
-
-    cursor.classList.add("active");
-
-}
-
-
-// 메뉴 클릭
-let header = document.querySelector("header");
-let navMenu = header.querySelectorAll("nav li");
-let highlight = header.querySelector(".highlight");
-
-let sct = window.scrollY;
-
-let section =
-    document.querySelectorAll("main section");
-
-let siteRow =
-    document.querySelectorAll(".row");
-
-let uiuxRow =
-    document.querySelector(".sec3");
-
-
-// DOM 로드
-document.addEventListener("DOMContentLoaded", function () {
-
-    typing();
-
-    typingInterval =
-        setInterval(typing, 120);
-
-
-    // 메뉴 클릭
-    navMenu.forEach(item => {
-
-        item.addEventListener("click", (e) => {
-
-            e.preventDefault();
-
-            let targetLeft =
-                e.target.offsetLeft;
-
-            let targetWidth =
-                e.target.offsetWidth;
-
-
-            highlight.style.left =
-                targetLeft + "px";
-
-            highlight.style.width =
-                targetWidth + "px";
-
-            highlight.style.display =
-                "block";
-
-
-            let targetId =
-                item.querySelector("a").getAttribute("href");
-
-            let targetOst =
-                document.querySelector(targetId);
-
-
-            window.scrollTo({
-
-                left: 0,
-
-                top: targetOst.offsetTop - 100,
-
-                behavior: "smooth"
-
-            });
-
-        });
-
     });
+}, {
+    threshold: 0.14
+});
 
-
-    // 스크롤
-    window.addEventListener("scroll", () => {
-
-        sct = window.scrollY;
-
-
-        section.forEach((sec, idx) => {
-
-            let rect =
-                sec.getBoundingClientRect();
-
-
-            if (
-                rect.top <= window.innerHeight / 2 &&
-                rect.bottom >= window.innerHeight / 2
-            ) {
-
-                for (let m of navMenu) {
-
-                    m.classList.remove("active");
-
-                }
-
-                navMenu[idx].classList.add("active");
-
-                highlight.style.display =
-                    "block";
-
-
-                let targetLeft =
-                    navMenu[idx].offsetLeft;
-
-                let targetWidth =
-                    navMenu[idx].offsetWidth;
-
-
-                highlight.style.left =
-                    targetLeft + "px";
-
-                highlight.style.width =
-                    targetWidth + "px";
-
-            }
-
-        });
-
-
-        siteRow.forEach(row => {
-
-            let rect =
-                row.getBoundingClientRect();
-
-
-            if (
-                rect.top <= window.innerHeight / 2 &&
-                rect.bottom >= window.innerHeight / 2
-            ) {
-
-                row.classList.add("active");
-
-            }
-
-        });
-
-
-        if (uiuxRow.offsetTop - 250 <= sct) {
-
-            uiuxRow.classList.add("active");
-
-        }
-
-
-        if (sct === 0) {
-
-            highlight.style.display =
-                "none";
-
-            navMenu.forEach(m => {
-
-                m.classList.remove("active");
-
-            });
-
-            header.classList.remove("active");
-
-        } else {
-
-            header.classList.add("active");
-
-        }
-
-    });
-
+revealItems.forEach((item) => {
+    observer.observe(item);
 });
 
 
-// =========================
-// Skill
-// =========================
+/* =========================================================
+   HEADER SCROLL
+========================================================= */
 
-const skillTrack =
-    document.getElementById("skillTrack");
+window.addEventListener('scroll', () => {
+    if (!header) return;
 
-let skills = [];
+    header.classList.toggle(
+        'scrolled',
+        window.scrollY > 20
+    );
+});
 
 
-// JSON 가져오기
-fetch("./skill.json")
-    .then(res => res.json())
-    .then(data => {
+/* =========================================================
+   PC NAV SMOOTH SCROLL
+========================================================= */
 
-        skills = data;
+document.querySelectorAll('.gnb a').forEach((a) => {
+    a.addEventListener('click', (e) => {
+        const href = a.getAttribute('href');
+        const target = document.querySelector(href);
 
-        createSkill();
+        if (target) {
+            e.preventDefault();
 
+            target.scrollIntoView({
+                behavior: 'smooth'
+            });
+        }
+    });
+});
+
+
+/* =========================================================
+   MOBILE MENU
+========================================================= */
+
+const menuButton = document.querySelector('.menu');
+const mobileNav = document.querySelector('.mobile-nav');
+
+if (menuButton && mobileNav) {
+
+    /* 모바일 메뉴 열기 / 닫기 */
+
+    menuButton.addEventListener('click', () => {
+        const isActive = menuButton.classList.toggle('active');
+
+        mobileNav.classList.toggle(
+            'active',
+            isActive
+        );
+
+        menuButton.setAttribute(
+            'aria-expanded',
+            isActive
+        );
     });
 
 
-// 스킬 아이콘 생성
-function createSkill() {
+    /* 모바일 메뉴 클릭 시 닫기 */
 
-    skillTrack.innerHTML = "";
+    document.querySelectorAll('.mobile-nav a').forEach((a) => {
+        a.addEventListener('click', (e) => {
+            const href = a.getAttribute('href');
+            const target = document.querySelector(href);
 
+            if (target) {
+                e.preventDefault();
 
-    // 첫 번째 세트
-    skills.forEach(skill => {
+                menuButton.classList.remove('active');
+                mobileNav.classList.remove('active');
 
-        const item =
-            document.createElement("div");
+                menuButton.setAttribute(
+                    'aria-expanded',
+                    'false'
+                );
 
-        item.classList.add("skill_item");
-
-        item.innerHTML = `
-             <div class="skill_img">
-                <img
-                    src="${skill.img}"
-                    alt="${skill.name}"
-                >
-            </div>
-
-            <p class="skill_name">
-                ${skill.name}
-            </p>
-        `;
-
-        skillTrack.appendChild(item);
-
+                setTimeout(() => {
+                    target.scrollIntoView({
+                        behavior: 'smooth'
+                    });
+                }, 50);
+            }
+        });
     });
+
+}
+
+
+/* =========================================================
+   HERO TYPING EFFECT
+========================================================= */
+
+const typeText = document.querySelector('.typeText');
+const cursor = document.querySelector('.typeAct');
+
+if (typeText && cursor) {
+
+    const typeTextArr = [
+        '함께 일하고 싶은',
+        '같이 밥먹고 싶은',
+        '웹을 통해 이야기하는'
+    ];
+
+    let typeTextIndex = 0;
+    let charIndex = 0;
+    let isDeleting = false;
+
+
+    function typing() {
+        const currentText = typeTextArr[typeTextIndex];
+
+
+        /* 글자 입력 */
+
+        if (!isDeleting) {
+            typeText.textContent = currentText.slice(
+                0,
+                charIndex
+            );
+
+            charIndex++;
+
+
+            /* 문장을 다 입력하면 잠시 대기 */
+
+            if (charIndex > currentText.length) {
+                isDeleting = true;
+
+                setTimeout(typing, 2200);
+
+                return;
+            }
+
+
+        /* 글자 삭제 */
+
+        } else {
+            charIndex--;
+
+            typeText.textContent = currentText.slice(
+                0,
+                charIndex
+            );
+
+
+            /* 문장을 모두 삭제하면 다음 문장 */
+
+            if (charIndex === 0) {
+                isDeleting = false;
+
+                typeTextIndex =
+                    (typeTextIndex + 1) % typeTextArr.length;
+            }
+        }
+
+
+        /* 입력 / 삭제 속도 */
+
+        setTimeout(
+            typing,
+            isDeleting ? 55 : 100
+        );
+    }
+
+
+    typing();
 
 }

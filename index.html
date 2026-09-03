@@ -1,259 +1,774 @@
 <!DOCTYPE html>
-<html lang="en">
+<html lang="ko">
 <head>
-	<meta charset="UTF-8">
-	<meta name="viewport" content="width=device-width, initial-scale=1.0">
-	<title>포트폴리오_기서은</title>
-	<link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.2/dist/css/bootstrap.min.css" rel="stylesheet"
-		integrity="sha384-T3c6CoIi6uLrA9TneNEoa7RxnatzjcDSCmG1MXxSR1GAsXEV/Dwwykc2MPK8M2HN" crossorigin="anonymous">
-	<link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/bootstrap-icons@1.10.5/font/bootstrap-icons.css">
-	<link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/Swiper/10.1.0/swiper-bundle.min.css"
-		integrity="sha512-1mKT2l92H6btoIkk6fIotzeArJ3G59u/xMsDyBb/XROahx4zpXeXucqzVYssrrK0AHSNjSfe4QVE/loSr85jfA=="
-		crossorigin="anonymous" referrerpolicy="no-referrer">
-	<link rel="stylesheet" href="css/reset.css">
-	<link rel="stylesheet" href="css/common.css">
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta name="description" content="기서은 Web Publisher Portfolio">
+    <title>기서은 | Web Publisher Portfolio</title>
+
+    <!-- FONT -->
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Inter:wght@400;500;600;700;800&family=Noto+Sans+KR:wght@400;500;600;700;800&display=swap" rel="stylesheet">
+
+    <!-- BOOTSTRAP -->
+    <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.3/dist/css/bootstrap.min.css" rel="stylesheet">
+
+    <!-- BOOTSTRAP ICON -->
+    <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/bootstrap-icons@1.11.3/font/bootstrap-icons.min.css">
+
+    <!-- SWIPER -->
+    <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/swiper@11/swiper-bundle.min.css">
+
+    <!-- CSS -->
+    <link rel="stylesheet" href="css/style.css">
 </head>
+
 <body>
 
-	<div id="skip">
-		<a rel="bookmark" href="#container">본문바로가기</a>
-	</div>
-	<div id="wrap">
-		<header class="sticky-top white_back">
-			<nav class="container">
-				<ul class="d-flex justify-content-end position-relative">
-					<li class="p-3 h5"><a href="#about">About</a></li>
-					<li class="p-3 h5"><a href="#website">Website</a></li>
-					<li class="p-3 h5"><a href="#uiux">Ui/Ux</a></li>
-					<li class="p-3 h5"><a href="#contact">Contact</a></li>
-					<span class="highlight"></span>
-				</ul>
-			</nav>
-		</header>
-		<section class="banner p-5 position-relative">
-			<div class="py-5">
-				<h1 class="h1 white my-4">Better late than never.</h1>
-				<div class="typeAct h3 mb-2">
-					<p class="typeText white"></p>
-				</div>
-				<p class="white h4 mb-4">웹퍼블리셔 기서은입니다.</p>
-				<a target="_blank" href="https://github.com/rltjdms" class="btn rounded-pill h4 mb-4"><i
-						class="bi bi-github"></i></a>
-			</div>
-			<p class="myphoto position-absolute">기서은 이미지</p>
-		</section>
-		<main>
-			<div class="container">
-				<section class="sec1" id="about">
-					<div class="container_box">
-						<h2 class="font-cap h2 mb-3">about me</h2>
-						<div class="text-box mb-5">
-							<p class="h5">&#183 자기개발을 위해 시작하다가, 지금은 꿈과 목표가 되었습니다.</p>
-							<p class="h5">&#183 강한 의지와 끈기를 가지고 있습니다.</p>
-							<p class="h5">&#183 문제가 생기면 해결될 때까지 물고 놓아주지 않습니다.</p>
-							<p class="h5">&#183 설사 문제가 해결됐더라도, 늘 더 나은 방법에 대한 미련이 생기는 프로 뒷끝러입니다.</p>
-							<p class="h5">&#183 사용자 경험을 개선하고 시각적인 표현을 극대화하기 위해 적극적인 디자인 참여와 코드 최적화에 힘쓰며, 항상 새로운 웹 트렌드와
-								기술 동향에 관심을 가지고 성장하고 있습니다.</p>
-						</div>
-						<h2 class="h2 mb-4">My Skils</h2>
-						<!-- 스킬 json -->
-						<div class="skill_slide">
-							<div class=" d-flex justify-content-center skill_track" id="skillTrack"></div>
-						</div>
-					</div>
-				</section>
-				<section class="sec2" id="website">
-					<div>
-						<h2 class="h2 font-cap">website</h2>
-						<div class="row mb-5">
-							<div class="col">
-								<img src="img/mockup_pro_4.svg" alt="LMS 사용자 목업" class="mb-5">
-							</div>
-							<div class="col">
-								<div class="text-box mb-3">
-									<p class="font-cap h2 mb-3"> project <strong class="mint">LMS 사용자</strong> website
-										#1</p>
-									<p class="h5 mb-3"> 관리자 기반으로 등록한 기능들을<br>사용자 페이지에서 나타날 수 있도록 구현했습니다.<br>
-										누구든 빠르고 쉽게 사용할 수 있는 사이트를 만들기 위해 노력했습니다.
-									<p class="h5 mb-2">- Bootstrap 기반 웹사이트</p>
-									<p class="h5">디자인 및 구현 : Main page, 쿠폰함, 룰렛 이벤트</p>
-									<p class="h5">사용 언어 : html, css, Javascript, jQuery, php, Mysql</p>
-								</div>
-								<div class="d-flex gap-2">
-									<a target="_blank"
-										href="https://picayune-cup-c4f.notion.site/LMS-4-ce0e37dc3f5e4a4c8d1ab7edccb56a2f?pvs=4"
-										class="btn rounded-pill h6">자세히 보기</a>
-									<a target="_blank"
-										href="https://www.figma.com/proto/92c4xBFIy8y1s62INnRafc/Samsung_display?type=design&node-id=1-27092&t=eOPG4T6RHtu7ATKa-0&scaling=min-zoom&page-id=1%3A17550&prev-org-id=external-teams"
-										class="btn rounded-pill h6 d-inline-flex align-items-center gap-2">기획서<i
-											class="bi bi-filetype-ppt"></i></a>
-									<a target="_blank" href="https://github.com/rltjdms/attention"
-										class="btn rounded-pill h6"><i class="bi bi-github"></i></a>
-								</div>
-							</div>
-						</div>
-						<div class="row mb-5">
-							<div class="col">
-								<div class="text-box mb-3">
-									<p class="font-cap h2 mb-3"> project <strong class="mint">LMS 관리자</strong> website
-										#2</p>
-									<p class="h5 mb-3">LMS 관리자로 강좌 관리 및 매출 등 간결하고 효율적인 메뉴 구성,<br>주요 메뉴와 세부 기능의 분리로 편의성 및
-										효율성 중점으로 제작했습니다.</p>
-									<p class="h5 mb-2">- Bootstrap 기반 웹사이트</p>
-									<p class="h5">구성 목록 : Main page, One Depth Menu</p>
-									<p class="h5">디자인 및 구현 : 쿠폰 관리</p>
-									<p class="h5">사용 언어 : html, css, Javascript, jQuery, php, Mysql</p>
-								</div>
-								<div class="d-flex gap-2">
-									<a target="_blank"
-										href="https://picayune-cup-c4f.notion.site/LMS-3-1dafd761c34e4065bf47070643fc07d5?pvs=4"
-										class="btn rounded-pill h6">자세히 보기</a>
-									<a target="_blank"
-										href="https://www.figma.com/proto/92c4xBFIy8y1s62INnRafc/Samsung_display?type=design&node-id=1-13322&t=M8zt5aS2kOx0Z8fv-0&scaling=min-zoom&page-id=1%3A7690"
-										class="btn rounded-pill h6 d-inline-flex align-items-center gap-2">기획서<i
-											class="bi bi-filetype-ppt"></i></a>
-									<a target="_blank" href="https://github.com/rltjdms/attention"
-										class="btn rounded-pill h6"><i class="bi bi-github"></i></a>
-								</div>
-							</div>
-							<div class="col">
-								<img src="img/mockup_pro_3.svg" alt="LMS 관리자 목업" class="mb-5">
-							</div>
-						</div>
-						<div class="row mb-5">
-							<div class="col">
-								<img src="img/mockup_pro_2.svg" alt="삼성 디스플레이 리뉴얼 목업" class="mb-5">
-							</div>
-							<div class="col">
-								<div class="text-box mb-3">
-									<p class="font-cap h2 mb-3"> project <strong class="blue">samsung
-											display</strong><br>website renewal #3</p>
-									<p class="h5 mb-3"> 상상을 뛰어넘는 디스플레이!<br>
-										사용자의 정보 접근성 향상을 위한 메뉴 개선과<br>
-										빠르게 변화하는 디스플레이 시장에서 트렌디한 디자인과 함께<br> 스크롤 애니메이션으로 동적 요소 부여했습니다. </p>
-									<p class="h5 mb-2">- 반응형(768px, 480px)</p>
-									<p class="h5">디자인 및 구현 : Main page - TECHNOLOGY, Sub page - QD-OLED</p>
-									<p class="h5">사용 언어 : html, css, jQuery (Flex, Bootstrap, jQuery Library)</p>
-								</div>
-								<div class="d-flex gap-2">
-									<a target="_blank"
-										href="https://picayune-cup-c4f.notion.site/2-bd9654beafe44ad4af33e90de17cc8d7?pvs=4"
-										class="btn rounded-pill h6">자세히 보기</a>
-									<a target="_blank"
-										href="https://www.figma.com/proto/92c4xBFIy8y1s62INnRafc/Samsung_display?type=design&node-id=1-3723&t=r4CEvr3jCMUJIynL-0&scaling=min-zoom&page-id=0%3A1"
-										class="btn rounded-pill h6 d-inline-flex align-items-center gap-2">기획서<i
-											class="bi bi-filetype-ppt"></i></a>
-									<a target="_blank" href="https://github.com/rltjdms/last_child"
-										class="btn rounded-pill h6"><i class="bi bi-github"></i></a>
-								</div>
-							</div>
-						</div>
-						<div class="row mb-5">
-							<div class="col">
-								<div class="text-box mb-3">
-									<p class="font-cap h2 mb-3"> project <strong class="blue">Nexon</strong> website
-										renewal #4</p>
-									<p class="h5 mb-3">기존의 단순한 게임 사이트 랜딩 서비스에서 더 나아가<br>게임이라는 상품을 컨텐츠 중심으로 심미성을 높이고 사용성을
-										향상시켰습니다.</p>
-									<p class="h5 mb-2">- 반응형 X, float 기반 웹사이트</p>
-									<p class="h5">디자인 및 구현 : Main page</p>
-									<p class="h5">사용 언어 : html, css, javascript</p>
-								</div>
-								<div class="d-flex gap-2">
-									<a target="_blank"
-										href="https://picayune-cup-c4f.notion.site/1-cdf87d797c404697955d92fd884abddb?pvs=4"
-										class="btn rounded-pill h6">자세히 보기</a>
-									<a target="_blank"
-										href="https://docs.google.com/presentation/d/1Cj2JVBKnhhtB1QZClt8VipUe3oEGxgbF/edit?usp=sharing&ouid=114124912863821411376&rtpof=true&sd=true"
-										class="btn rounded-pill h6 d-inline-flex align-items-center gap-2">기획서<i
-											class="bi bi-filetype-ppt"></i></a>
-									<a target="_blank" href="https://github.com/rltjdms/nexon_renewal"
-										class="btn rounded-pill h6"><i class="bi bi-github"></i></a>
-								</div>
-							</div>
-							<div class="col">
-								<img src="img/mockup_pro_1.svg" alt="넥슨 리뉴얼 목업" class="mb-5">
-							</div>
-						</div>
-						<div class="row mb-5">
-							<div class="col">
-								<div class="text-box mb-3">
-									<p class="font-cap h2 mb-3"> project <strong class="pink">lush</strong> website
-										renewal #5</p>
-									<p class="h5 mb-3">핸드메이드, 친환경, 비건 등을 지향하는 브랜드로<br> 러쉬의 다양한 제품들의 정보를 얻을 수 있도록 제작했습니다.
-									</p>
-									<p class="h5 mb-2">- 반응형 O, 개인 작업 100%</p>
-									<p class="h5">구현 : Main page, 러쉬Esg</p>
-									<p class="h5">사용 언어 : html, css, jquery</p>
-								</div>
-								<div class="d-flex gap-2">
-									<a target="_blank"
-										href="https://picayune-cup-c4f.notion.site/86b1c1c3bcfc4b76b052602be5a6c4de?pvs=4"
-										class="btn rounded-pill h6 m-0">자세히 보기</a>
-									<a target="_blank" href="https://github.com/rltjdms/Lush-renewal"
-										class="btn rounded-pill h6 m-0"><i class="bi bi-github"></i></a>
-								</div>
-							</div>
-							<div class="col">
-								<img src="img/mockup_lush.svg" alt="러쉬 리뉴얼 목업" class="mb-5">
-							</div>
-						</div>
-					</div>
-				</section>
-				<section class="sec3" id="uiux">
-					<h2 class="text-center h2 mb-4">Mobile UI/UX</h2>
-					<p class="text-center h4">Figma를 사용하여 UI/UX 모바일 사이즈 제작했습니다.</p>
-					<div class="d-flex align-items-center justify-content-between row">
-						<div class="d-flex align-items-center flex-column col">
-							<p class="h2 mb-3">LUSH</p>
-							<a target="_blank"
-								href="https://www.figma.com/proto/LipYI01fIrzabYo01ARFxs/LUSH?type=design&node-id=112-302&t=gy63G0YSOff3i0LG-0&scaling=min-zoom&page-id=112%3A185"
-								class="btn rounded-pill h6 d-inline-flex align-items-center gap-2"><img
-									src="img/figma.png" class="rounded-pill" alt="피그마 아이콘">
-								<span>Design</span>
-							</a>
-							<img src="img/mobile_lush.svg" alt="러쉬 모바일">
-						</div>
-						<div class="d-flex align-items-center flex-column col">
-							<p class="h2 mb-3">CNP</p>
-							<a target="_blank"
-								href="https://www.figma.com/proto/LipYI01fIrzabYo01ARFxs/LUSH?type=design&node-id=107-200&t=gy63G0YSOff3i0LG-0&scaling=min-zoom&page-id=107%3A185"
-								class="btn rounded-pill h6 d-inline-flex align-items-center gap-2"><img
-									src="img/figma.png" class="rounded-pill" alt="피그마 아이콘">
-								<span>Design</span>
-							</a>
-							<img src="img/mobile_cnp.svg" alt="CNP 디자인">
-						</div>
-					</div>
-				</section>
-				<section class="sec4" id="contact">
-					<div class="container_box text-center beige_back p-5 h6">
-						<h2 class="h2 mb-2">Contact</h2>
-						<p class="mb-2">제 포트폴리오를 봐주셔서 감사합니다!</p>
-						<p class="mb-2">함께 도전하고 성장하겠습니다</p>
-						<p class="mb-4">언제든지 연락주세요!</p>
-						<a href="mailto:rltjdms3431@naver.com" class="me-2">
-							<i class="bi bi-envelope-at me-2"></i>
-							<span>rltjdms3431@naver.com</span>
-						</a>
-						<a href="tel:010-9083-2829">
-							<i class="bi bi-telephone me-2"></i>
-							<span>010-9083-2829</span>
-						</a>
-					</div>
-				</section>
-			</div>
-		</main>
-	</div>
-	<script src="https://cdnjs.cloudflare.com/ajax/libs/modernizr/2.8.3/modernizr.min.js"
-		referrerpolicy="no-referrer"></script>
-	<script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.2/dist/js/bootstrap.bundle.min.js"
-		integrity="sha384-C6RzsynM9kWDrMNeT87bh95OGNyZPhcTNXj1NW7RuBCsyN/o0jlpcV8Qyq46cDfL"
-		crossorigin="anonymous"></script>
-	<script src="https://cdn.jsdelivr.net/npm/swiper@10/swiper-bundle.min.js"></script>
-	<script src="js/main.js"></script>
+    <!-- =========================================================
+         HEADER
+    ========================================================= -->
 
+    <header class="header">
+
+        <a href="#home" class="logo">
+            SEOEUN<span>.</span>
+        </a>
+
+        <!-- PC NAV -->
+        <nav class="gnb">
+            <a href="#home">HOME</a>
+            <a href="#about">ABOUT</a>
+            <a href="#skills">SKILLS</a>
+            <a href="#projects">PROJECTS</a>
+            <a href="#more-projects">WORKS</a>
+            <a href="#contact">CONTACT</a>
+        </nav>
+
+        <!-- MOBILE MENU BUTTON -->
+        <button type="button" class="menu" aria-label="메뉴 열기" aria-expanded="false">
+            <i></i>
+            <i></i>
+            <i></i>
+        </button>
+
+    </header>
+
+
+    <!-- =========================================================
+         MOBILE NAV
+    ========================================================= -->
+
+    <div class="mobile-nav">
+        <div class="mobile-nav-inner">
+            <a href="#home">HOME</a>
+            <a href="#about">ABOUT</a>
+            <a href="#skills">SKILLS</a>
+            <a href="#projects">PROJECTS</a>
+            <a href="#more-projects">WORKS</a>
+            <a href="#contact">CONTACT</a>
+        </div>
+    </div>
+
+
+    <!-- =========================================================
+         MAIN
+    ========================================================= -->
+
+    <main id="wrap">
+
+        <!-- HERO -->
+        <section class="hero" id="home">
+
+            <div class="hero-bg" aria-hidden="true">
+                <span class="blob blob01"></span>
+                <span class="blob blob02"></span>
+            </div>
+
+            <div class="hero-inner">
+
+                <p class="eyebrow">WEB PUBLISHER PORTFOLIO</p>
+
+                <div class="hero-title">
+                    <h1>
+                        <span class="typeText"></span>
+                        <span class="typeAct">|</span>
+                        <br>
+                        <strong>웹퍼블리셔</strong>
+                    </h1>
+                </div>
+
+                <p class="hero-copy">
+                    사용자 경험을 생각하고,<br>
+                    디자인을 코드로 완성합니다.
+                </p>
+
+                <a class="scroll" href="#about">
+                    SCROLL DOWN
+                    <span>↓</span>
+                </a>
+
+            </div>
+
+            <p class="hero-motto">Better late than never.</p>
+
+        </section>
+
+
+        <!-- ABOUT -->
+        <section class="about section" id="about">
+
+            <div class="about-grid">
+
+                <div class="about-copy">
+
+                    <p class="eyebrow">ABOUT ME</p>
+
+                    <h3>
+                        작은 디테일을 쌓아<br>
+                        <strong>더 나은 웹</strong>을 만듭니다.
+                    </h3>
+
+                    <p>자기개발을 위해 시작하다가, 지금은 꿈과 목표가 되었습니다.</p>
+                    <p>강한 의지와 끈기를 가지고 있습니다.</p>
+                    <p>문제가 생기면 해결될 때까지 물고 놓아주지 않습니다.</p>
+                    <p>
+                        해결된 문제도 더 나은 방법이 없는지 고민하며,
+                        사용자 경험과 시각적인 표현을 높이기 위해
+                        디자인과 코드 최적화에 적극적으로 참여합니다.
+                    </p>
+
+                </div>
+
+                <dl class="profile-info">
+
+                    <div>
+                        <dt>Name</dt>
+                        <dd>기서은</dd>
+                    </div>
+
+                    <div>
+                        <dt>Birth</dt>
+                        <dd>1998. 02. 25</dd>
+                    </div>
+
+                    <div>
+                        <dt>Email</dt>
+                        <dd>rltjdms3431@naver.com</dd>
+                    </div>
+
+                    <div>
+                        <dt>Tel</dt>
+                        <dd>010-9083-2829</dd>
+                    </div>
+
+                    <div>
+                        <dt>Git</dt>
+                        <dd>
+                            <a target="_blank" href="https://github.com/rltjdms" class="btn rounded-pill h4 git_icon">
+                                <i class="bi bi-github"></i>
+                            </a>
+                        </dd>
+                    </div>
+
+                </dl>
+
+            </div>
+
+        </section>
+
+
+        <!-- SKILLS -->
+        <section class="section skills" id="skills">
+
+            <div class="skills-heading">
+
+                <div>
+                    <p class="eyebrow">MY SKILLS</p>
+
+                    <h3>
+                        디자인을 이해하고,<br>
+                        <strong>코드로 완성합니다.</strong>
+                    </h3>
+                </div>
+
+                <p class="skills-intro">
+                    다양한 프로젝트 경험을 통해<br>
+                    퍼블리싱부터 프론트엔드까지 경험했습니다.
+                </p>
+
+            </div>
+
+
+            <div class="skill-groups">
+
+                <!-- PUBLISHING CORE -->
+                <div class="skill-group">
+
+                    <div class="skill-group-head">
+                        <span>01</span>
+                        <h4>Publishing Core</h4>
+                    </div>
+
+                    <div class="skill-items">
+
+                        <div class="skill-item">
+                            <div class="skill-icon html">HTML</div>
+                            <div>
+                                <b>HTML5</b>
+                                <span>Semantic Markup</span>
+                            </div>
+                        </div>
+
+                        <div class="skill-item">
+                            <div class="skill-icon css">CSS</div>
+                            <div>
+                                <b>CSS3</b>
+                                <span>Responsive · Animation</span>
+                            </div>
+                        </div>
+
+                        <div class="skill-item">
+                            <div class="skill-icon js">JS</div>
+                            <div>
+                                <b>JavaScript</b>
+                                <span>DOM · ES6+</span>
+                            </div>
+                        </div>
+
+                        <div class="skill-item">
+                            <div class="skill-icon jq">jq</div>
+                            <div>
+                                <b>jQuery</b>
+                                <span>Interaction</span>
+                            </div>
+                        </div>
+
+                    </div>
+
+                </div>
+
+
+                <!-- DEVELOPMENT -->
+                <div class="skill-group">
+
+                    <div class="skill-group-head">
+                        <span>02</span>
+                        <h4>Development</h4>
+                    </div>
+
+                    <div class="skill-items">
+
+                        <div class="skill-item">
+                            <div class="skill-icon php">PHP</div>
+                            <div>
+                                <b>PHP</b>
+                                <span>Backend · CRUD</span>
+                            </div>
+                        </div>
+
+                        <div class="skill-item">
+                            <div class="skill-icon react">R</div>
+                            <div>
+                                <b>React</b>
+                                <span>JSX · Component</span>
+                            </div>
+                        </div>
+
+                        <div class="skill-item">
+                            <div class="skill-icon sql">DB</div>
+                            <div>
+                                <b>MySQL</b>
+                                <span>Database</span>
+                            </div>
+                        </div>
+
+                        <div class="skill-item">
+                            <div class="skill-icon axios">AX</div>
+                            <div>
+                                <b>Axios</b>
+                                <span>API Request</span>
+                            </div>
+                        </div>
+
+                    </div>
+
+                </div>
+
+
+                <!-- LIBRARIES & TOOLS -->
+                <div class="skill-group">
+
+                    <div class="skill-group-head">
+                        <span>03</span>
+                        <h4>Libraries &amp; Tools</h4>
+                    </div>
+
+                    <div class="skill-tags">
+                        <span>Bootstrap</span>
+                        <span>Swiper</span>
+                        <span>Slick</span>
+                        <span>Redux</span>
+                        <span>Redux Toolkit</span>
+                        <span>Firebase</span>
+                        <span>Figma</span>
+                        <span>GitHub</span>
+                        <span>VS Code</span>
+                        <span>Photoshop</span>
+                        <span>Illustrator</span>
+                        <span>Slack</span>
+                    </div>
+
+                </div>
+
+            </div>
+
+        </section>
+
+
+        <!-- PROJECTS -->
+        <section class="section projects" id="projects">
+
+            <div class="section-title">
+
+                <div>
+                    <p class="eyebrow">03 · PROJECTS</p>
+                    <h2>Selected <span>Works</span></h2>
+                </div>
+
+                <p>
+                    직접 기획하고 디자인하거나<br>
+                    퍼블리싱에 참여한 프로젝트입니다.
+                </p>
+
+            </div>
+
+
+            <div class="project-list">
+
+                <!-- PROJECT 01 -->
+                <article class="project reveal">
+
+                    <div class="mockup lucky">
+                        <img src="img/mockup_pro_4.svg" alt="LMS User 프로젝트 화면">
+                    </div>
+
+                    <div class="project-info">
+
+                        <p class="tag">01 · TEAM PROJECT</p>
+
+                        <h3>LMS User</h3>
+
+                        <p>
+                            LMS 관리자 기반으로 등록한 기능들을
+                            사용자 페이지에서 나타날 수 있도록 구현했습니다.
+                        </p>
+
+                        <ul>
+                            <li>Bootstrap 기반 웹사이트</li>
+                            <li>Main page, 쿠폰함, 룰렛 이벤트 구현</li>
+                            <li>php, Mysql 기반 데이터베이스 등록 및 구현</li>
+                            <li>JavaScript · jQuery 등 사용</li>
+                        </ul>
+
+                        <div class="project-buttons">
+                            <a target="_blank" href="https://picayune-cup-c4f.notion.site/LMS-4-ce0e37dc3f5e4a4c8d1ab7edccb56a2f?pvs=4" class="btn-line">
+                                자세히 보기
+                                <i class="bi bi-arrow-up-right"></i>
+                            </a>
+
+                            <a target="_blank" href="https://www.figma.com/proto/92c4xBFIy8y1s62INnRafc/Samsung_display?type=design&node-id=1-27092&t=eOPG4T6RHtu7ATKa-0&scaling=min-zoom&page-id=1%3A17550&prev-org-id=external-teams" class="btn-line">
+                                기획서
+                            </a>
+                        </div>
+
+                    </div>
+
+                </article>
+
+
+                <!-- PROJECT 02 -->
+                <article class="project reverse reveal">
+
+                    <div class="mockup admin">
+                        <img src="img/mockup_pro_3.svg" alt="LMS Admin 프로젝트 화면">
+                    </div>
+
+                    <div class="project-info">
+
+                        <p class="tag">02 · TEAM PROJECT</p>
+
+                        <h3>LMS Admin</h3>
+
+                        <p>
+                            관리자가 쿠폰을 등록하고
+                            데이터를 관리할 수 있도록 제작한
+                            관리자 페이지입니다.
+                        </p>
+
+                        <ul>
+                            <li>Bootstrap 기반 웹사이트</li>
+                            <li>쿠폰 등록 / 수정 / 삭제</li>
+                            <li>검색, 카테고리, 활성화 기능</li>
+                            <li>Ajax · PHP · MySQL</li>
+                        </ul>
+
+                        <div class="project-buttons">
+                            <a target="_blank" href="https://picayune-cup-c4f.notion.site/LMS-3-1dafd761c34e4065bf47070643fc07d5?pvs=4" class="btn-line">
+                                자세히 보기
+                                <i class="bi bi-arrow-up-right"></i>
+                            </a>
+
+                            <a target="_blank" href="https://www.figma.com/proto/92c4xBFIy8y1s62INnRafc/Samsung_display?type=design&node-id=1-13322&t=M8zt5aS2kOx0Z8fv-0&scaling=min-zoom&page-id=1%3A7690" class="btn-line">
+                                기획서
+                            </a>
+                        </div>
+
+                    </div>
+
+                </article>
+
+
+                <!-- PROJECT 03 -->
+                <article class="project reveal">
+
+                    <div class="mockup samsung">
+                        <img src="img/mockup_pro_2.svg" alt="Samsung Display 프로젝트 화면">
+                    </div>
+
+                    <div class="project-info">
+
+                        <p class="tag">03 · RENEWAL</p>
+
+                        <h3>Samsung Display</h3>
+
+                        <p>
+                            기존 Samsung Display 사이트의
+                            구조와 UI를 분석하여
+                            새로운 디자인으로 리뉴얼했습니다.
+                        </p>
+
+                        <ul>
+                            <li>768px, 480px 반응형 구현</li>
+                            <li>TECHNOLOGY, QD-OLED page 구현</li>
+                            <li>메뉴 개선 및 스크롤 애니메이션</li>
+                            <li>jQuery, CSS Animation</li>
+                        </ul>
+
+                        <div class="project-buttons">
+                            <a target="_blank" href="https://picayune-cup-c4f.notion.site/2-bd9654beafe44ad4af33e90de17cc8d7?pvs=4" class="btn-line">
+                                자세히 보기
+                                <i class="bi bi-arrow-up-right"></i>
+                            </a>
+
+                            <a target="_blank" href="https://www.figma.com/proto/92c4xBFIy8y1s62INnRafc/Samsung_display?type=design&node-id=1-3723&t=r4CEvr3jCMUJIynL-0&scaling=min-zoom&page-id=0%3A1" class="btn-line">
+                                기획서
+                            </a>
+                        </div>
+
+                    </div>
+
+                </article>
+
+
+                <!-- PROJECT 04 -->
+                <article class="project reverse reveal">
+
+                    <div class="mockup nexon">
+                        <img src="img/mockup_pro_1.svg" alt="Nexon 프로젝트 화면">
+                    </div>
+
+                    <div class="project-info">
+
+                        <p class="tag">04 · RENEWAL</p>
+
+                        <h3>NEXON</h3>
+
+                        <p>
+                            게임 콘텐츠를 중심으로
+                            기존 사이트의 구조와
+                            비주얼을 새롭게 구성했습니다.
+                        </p>
+
+                        <ul>
+                            <li>반응형 X, float 기반 웹사이트</li>
+                            <li>Main page</li>
+                            <li>기초적인 HTML, CSS, Javascript를 학습한 후 제작</li>
+                            <li>다크모드 옵션 기능</li>
+                        </ul>
+
+                        <div class="project-buttons">
+                            <a target="_blank" href="https://picayune-cup-c4f.notion.site/1-cdf87d797c404697955d92fd884abddb?pvs=4" class="btn-line">
+                                자세히 보기
+                                <i class="bi bi-arrow-up-right"></i>
+                            </a>
+
+                            <a target="_blank" href="https://docs.google.com/presentation/d/1Cj2JVBKnhhtB1QZClt8VipUe3oEGxgbF/edit?usp=sharing&ouid=114124912863821411376&rtpof=true&sd=true" class="btn-line">
+                                기획서
+                            </a>
+                        </div>
+
+                    </div>
+
+                </article>
+
+
+                <!-- PROJECT 05 -->
+                <article class="project reveal">
+
+                    <div class="mockup lush">
+                        <img src="img/mockup_lush.svg" alt="LUSH 프로젝트 화면">
+                    </div>
+
+                    <div class="project-info">
+
+                        <p class="tag">05 · RENEWAL</p>
+
+                        <h3>LUSH</h3>
+
+                        <p>
+                            브랜드의 감성을 유지하면서
+                            사용자 중심의 UI로 재구성한
+                            웹사이트 리뉴얼 프로젝트입니다.
+                        </p>
+
+                        <ul>
+                            <li>반응형 웹사이트</li>
+                            <li>개인 100% 작업</li>
+                            <li>Main page, 러쉬Esg 구현</li>
+                            <li>html, css, jquery</li>
+                        </ul>
+
+                        <div class="project-buttons">
+                            <a target="_blank" href="https://picayune-cup-c4f.notion.site/86b1c1c3bcfc4b76b052602be5a6c4de?pvs=4" class="btn-line">
+                                자세히 보기
+                                <i class="bi bi-arrow-up-right"></i>
+                            </a>
+                        </div>
+
+                    </div>
+
+                </article>
+
+            </div>
+
+        </section>
+
+
+        <!-- MOBILE UI / UX -->
+        <section class="section mobile-ui" id="mobile">
+
+            <div class="section-title">
+
+                <div>
+                    <p class="eyebrow">04 · MOBILE UI/UX</p>
+                    <h2>Mobile <span>Design</span></h2>
+                </div>
+
+                <p>
+                    모바일 환경을 고려한<br>
+                    UI/UX 디자인 작업입니다.
+                </p>
+
+            </div>
+
+
+            <div class="mobile-grid">
+
+                <!-- LUSH MOBILE -->
+                <article class="phone-card reveal">
+
+                    <a href="https://www.figma.com/proto/LipYI01fIrzabYo01ARFxs/LUSH?type=design&node-id=112-302&t=gy63G0YSOff3i0LG-0&scaling=min-zoom&page-id=112%3A185">
+
+                        <div class="phone">
+                            <img src="img/mobile_lush.png" alt="LUSH 모바일 UI">
+                        </div>
+
+                        <div class="phone-info">
+
+                            <p class="tag">MOBILE UI/UX</p>
+
+                            <h3>LUSH Mobile</h3>
+
+                            <p>
+                                브랜드 모바일 화면을
+                                사용자 흐름에 맞게 구성했습니다.
+                            </p>
+
+                            <div class="tech">Figma · UI · UX</div>
+
+                        </div>
+
+                    </a>
+
+                </article>
+
+
+                <!-- CNP MOBILE -->
+                <article class="phone-card reveal">
+
+                    <a href="https://www.figma.com/proto/LipYI01fIrzabYo01ARFxs/LUSH?type=design&node-id=107-200&t=gy63G0YSOff3i0LG-0&scaling=min-zoom&page-id=107%3A185">
+
+                        <div class="phone">
+                            <img src="img/mobile_cnp.png" alt="CNP 모바일 UI">
+                        </div>
+
+                        <div class="phone-info">
+
+                            <p class="tag">MOBILE UI/UX</p>
+
+                            <h3>CNP Mobile</h3>
+
+                            <p>
+                                모바일 사용성을 중심으로
+                                화면 구조와 UI를 설계했습니다.
+                            </p>
+
+                            <div class="tech">Figma · UI · UX</div>
+
+                        </div>
+
+                    </a>
+
+                </article>
+
+            </div>
+
+        </section>
+
+
+        <!-- MORE PROJECTS -->
+        <section class="section more-projects" id="more-projects">
+
+            <div class="section-title">
+
+                <div>
+                    <p class="eyebrow">05 · MORE PROJECTS</p>
+                    <h2>Other <span>Works</span></h2>
+                </div>
+
+                <p>
+                    더 다양한 작업과<br>
+                    개인 프로젝트를 확인할 수 있습니다.
+                </p>
+
+            </div>
+
+
+            <div class="project-grid">
+
+                <!-- PROJECT 06 -->
+                <a target="_blank" href="https://rltjdms.github.io/ai_page/" class="project-card reveal">
+
+                    <div class="project-card-image">
+
+                        <img src="img/project/project06.png" alt="Project 06">
+
+                        <span class="project-card-arrow">↗</span>
+
+                    </div>
+
+                    <div class="project-card-info">
+
+                        <div>
+                            <span class="project-card-num">06</span>
+                            <span class="tag">WEB · RESPONSIVE</span>
+                        </div>
+
+                        <h3>GPT Ai Hompage</h3>
+
+                        <p>
+                            반응형 웹사이트
+                            퍼블리싱 프로젝트
+                        </p>
+
+                        <div class="project-card-tech">
+                            chat GPT만 사용하여 만들었습니다.
+                        </div>
+
+                    </div>
+
+                </a>
+
+
+                <!-- PROJECT 07 -->
+                <a target="_blank" href="https://rltjdms.github.io/hospital-renewal/" class="project-card reveal">
+
+                    <div class="project-card-image">
+
+                        <img src="img/project/project07.png" alt="Project 07">
+
+                        <span class="project-card-arrow">↗</span>
+
+                    </div>
+
+                    <div class="project-card-info">
+
+                        <div>
+                            <span class="project-card-num">07</span>
+                            <span class="tag">WEB · RENEWAL</span>
+                        </div>
+
+                        <h3>대남병원</h3>
+
+                        <p>
+                            기존 웹사이트를 개선한
+                            리뉴얼 프로젝트
+                        </p>
+
+                        <div class="project-card-tech">
+                            HTML · CSS · JavaScript
+                        </div>
+
+                    </div>
+
+                </a>
+
+            </div>
+
+        </section>
+
+
+        <!-- CONTACT -->
+        <section class="contact" id="contact">
+
+            <p class="eyebrow">CONTACT</p>
+
+            <h2>함께 더 나은 웹을 만들겠습니다.</h2>
+
+            <p>
+                포트폴리오를 봐주셔서 감사합니다.<br>
+                언제든지 편하게 연락주세요.
+            </p>
+
+            <div class="contact-info">
+                <a href="mailto:rltjdms3431@naver.com">✉ rltjdms3431@naver.com</a>
+                <a href="tel:01090832829">☎ 010-9083-2829</a>
+            </div>
+
+        </section>
+
+    </main>
+
+
+    <!-- =========================================================
+         FOOTER
+    ========================================================= -->
+
+    <footer>
+        <span>© 2026 SEO EUN. All rights reserved.</span>
+        <a href="#home">TOP ↑</a>
+    </footer>
+
+
+    <!-- =========================================================
+         SCRIPT
+    ========================================================= -->
+
+    <script src="https://cdn.jsdelivr.net/npm/swiper@11/swiper-bundle.min.js"></script>
+    <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.3/dist/js/bootstrap.bundle.min.js"></script>
+    <script src="js/main.js"></script>
 
 </body>
-
 </html>
